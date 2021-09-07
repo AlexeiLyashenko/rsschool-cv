@@ -10,7 +10,7 @@
 * __GitHub__: [alexeilyashenko](https://github.com/AlexeiLyashenko)
 ***
 #### About Me
-lorem ips ipslorem ips ips lorem ips ips lorem ips ips lorem ips ips lorem ips ips lorem ips ips lorem ips ips lorem ips ips lorem ips ips lorem ips ips lorem ips ips lorem ips ips lorem ips ips lorem ips ips lorem ips ips lorem ips ips  
+I love to create for myself the conditions in which my learning to program will be inevitable. When I discovered RS School, I was pleasantly surprised, because all conditions have been already created. My first goal on the course is to go through all the stages, learn with a mentor, write code as a team, and make the final project. The next goal is to find acceptable conditions (my future work) where I will grow as a developer with the people who will be surround me.
 ***
 #### Skills
 * HTML
