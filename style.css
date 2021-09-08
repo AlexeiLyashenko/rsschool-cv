@@ -1,0 +1,148 @@
+@font-face {
+	font-family: 'San Francisco Pro Display';
+	src: 
+		 url('fonts/SFProDisplay-Regular.woff2') format('woff2'),
+		 url('fonts/SFProDisplay-Regular.woff') format('woff'),
+		 url('fonts/SFProDisplay-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+ }
+ @font-face {
+	font-family: 'San Francisco Pro Display';
+	src: 
+		url('fonts/SFProDisplay-Medium.woff2') format('woff2'),
+		url('fonts/SFProDisplay-Medium.woff') format('woff'),
+		url('fonts/SFProDisplay-Medium.ttf') format('truetype');	
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'San Francisco Pro Display';
+	src: 
+		url('fonts/SFProDisplay-Semibold.woff2') format('woff2'),
+		url('fonts/SFProDisplay-Semibold.woff') format('woff'),
+		url('fonts/SFProDisplay-Semibold.ttf') format('truetype');	
+	font-weight: 600;
+	font-style: normal;
+}
+
+
+html, body {
+    height: 100%;
+    font-family: 'San Francisco Pro Display';
+}
+.wrapper {
+    padding: 30px 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-color: #ddd; /* need to change color*/
+}
+.container {
+    margin: 0 auto;
+    max-width: 1030px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(97, 97, 97, 0.3);
+}
+.contacts > li a {
+    display: inline;
+}
+
+.main-block {
+    display: flex;
+}
+
+.line {
+    margin-bottom: 115px;
+    height: 2px;
+    background-color: rgba(97, 97, 97, 0.3);
+}
+
+.title {
+    margin-bottom: 15px;
+    font-size: 26px;
+    line-height: 36px;
+    font-weight: 500;
+    color: rgba(47, 54, 64, 1);
+}
+.text {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgba(47, 54, 64, 1);
+
+}
+
+/* Left side */
+.left-side {
+    padding: 20px;
+    flex: 1 1 calc(40% - 40px);
+    background-color: #2c3d52;
+}
+.photo-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.photo {
+    margin-bottom: 30px;
+    display: block;
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #353b48;
+}
+.header {
+}
+.header h1 {
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 42px;
+    letter-spacing: 2px;
+    /* color: rgba(47, 54, 64, 1); */
+    color: #f5f6fa;
+}
+.header h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    color: rgba(47, 54, 64, 0.7);
+    color: #dcdde1;
+}
+.contacts {
+}
+.contacts__location {
+}
+.contacts__phone {
+}
+.contacts__email {
+}
+.contacts__telegram {
+}
+.contacts__github {
+}
+.languages {
+}
+
+/* Right side */
+.right-side {
+    padding: 20px;
+    flex: 0 1 calc(60% - 40px);
+}
+.main {
+}
+.about-me {
+}
+.skills {
+}
+.code {
+}
+.education {
+}
+.work {
+}
+.footer {
+}
