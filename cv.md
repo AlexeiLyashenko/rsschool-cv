@@ -1,4 +1,4 @@
-#### [cv link](#)
+### [rsschool-cv](#)
 ### Alexei Lyashenko
 ***
 #### Contacts:
@@ -37,12 +37,12 @@ function highAndLow(numbers){
 * __Self study__
     * All informations in online which i can learn
 * __Courses:__
-    * Udemy (JavaScript&React (in progress)
+    * Udemy JavaScript&React (in progress)
 * __University:__ 
     * Kharkiv National University of Urban Economy - Economics of Enterprise
 ***
 #### Work Experience
-* From September 2020 to May 2021 I worked in small start-up, on position junior murkup developer.
+* From September 2020 to May 2021 I worked in small start-up, as a junior murkup developer.
 ***
 #### English
 * __A2__
