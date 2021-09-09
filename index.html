@@ -4,112 +4,138 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="nullstyle.css">
-    <link rel="stylesheet" href="style.css">
-    <title>CV</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>CV RS School</title>
 </head>
 <body>
 
     <div class="wrapper">
-        <div class="container">
-            <div class="main-block">
-                <aside class="left-side">
-                    <div class="photo-frame">
-                        <img class="photo" src="img/photo.jpg" alt="main-photo">
-                    </div>
-                    <header class="header">
-                        <h1>Alexei Lyashenko</h1>
-                        <h3>Front-end developer (Beginner)</h3>
-                        <div class="line"></div>
-                    </header>
-                    <div class="contacts">
-                        <h3 class="title">Contacts</h3>
+        <header class="header">
+            <div class="container">
+                <div class="header__row">
+                    <ul class="header__contacts">
+                        <li>
+                            <a href="https://github.com/AlexeiLyashenko" target="_blank">
+                                qqq
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://telegram.me/rtghnt" target="_blank">
+                                www
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:lyashenko1alexei@gmail.com">
+                                eee
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+380992924382">
+                                rrr 
+                            </a>
+                        </li>
+                    </ul>
+                    <nav class="header__navigation">
                         <ul>
-                            <li class="contacts__location">
-                                <img src="" width="30" height="30" alt="location-icon"></img>
-                                <span>Kharkiv, Ukraine</span>
+                            <li>
+                                <a href="">Summary</a>
                             </li>
-                            <li class="contacts__phone">
-                                <img src="" width="30" height="30" alt="phone-icon"></img>
-                                <a href="tel:+380992924382">+38(099) 292-43-82</a>
+                            <li>
+                                <a href="">Skills</a>
                             </li>
-                            <li class="contacts__email">
-                                <img src="" width="30" height="30" alt="email-icon"></img>
-                                <a href="mailto:lyashenko1alexei@gmail.com">lyashenko1alexei@gmail.com</a>
+                            <li>
+                                <a href="">Projects</a>
                             </li>
-                            <li class="contacts__telegram">
-                                <img src="" width="30" height="30" alt="telegram-icon"></img>
-                                <a href="https://telegram.me/rtghnt" target="_blank">@rtgnht</a>
+                            <li>
+                                <a href="">Code Example</a>
                             </li>
-                            <li class="contacts__github">
-                                <img src="" width="30" height="30" alt="github-icon"></img>
-                                <a href="https://github.com/AlexeiLyashenko" target="_blank">alexeilyashenko</a>
+                            <li>
+                                <a href="">Experience</a>
+                            </li>
+                            <li>
+                                <a href="">Languages</a>
                             </li>
                         </ul>
-                    </div>
-                    <div class="languages">
-                        <h3 class="title">Languages</h3>
-                    </div>
-                </aside>
-                <div class="right-side">
-                    
-                    <main class="main">
-                        <section class="about-me">
-                            <h3 class="title">About Me</h3>
-                            <p class="text">I love to create conditions for myself in which my learning of code will be inevitable. When I discovered RS School, I was pleasantly surprised, because all conditions have been already created.</p>
-                            <p class="text">My first goal on the course is to go through all the stages, learn with a mentor, write code as a team, and make the final project. The next goal is to find acceptable conditions (my future work) where I will grow as a developer with the people who will be surround me.</p>
-                        </section>
-                        <section class="skills">
-                            <h3 class="title">Skills</h3>
-                            <ul class="text">
-                                <li>HTML</li>
-                                <li>CSS (SCSS, BEM)</li>
-                                <li>JavaScript (Basics, DOM, JSON)</li>
-                                <li>Git/GitHub</li>
-                                <li>Figma, Photoshop</li>
-                            </ul>
-                        </section>
-                        <section class="code">
-                            <h3 class="title">Code Example</h3>
-                            <pre>
-                                <code>
-                                function highAndLow(numbers) {
-                                    let nums = numbers
-                                        .split(' ')
-                                        .filter(num => num != '' || num != ' ')
-                                        .map(num => +num);
-                                  
-                                    nums.sort( (a, b) => a - b );
-                                  
-                                    return `${String(nums[nums.length-1])} ${String(nums[0])}`
-                                }
-                                </code>
-                            </pre>
-                        </section>
-                        <section class="education">
-                            <h3 class="title">Education</h3>
-                            <ul>
-                                <li>
-                                    <span>University:</span> Kharkiv National University of Urban Economy - Economics of Enterprise
-                                </li>
-                                <li>
-                                    <span>Courses:</span> Udemy JavaScript&React (in progress)
-                                </li>
-                                <li>
-                                    <span>Self study</span>
-                                </li>
-                            </ul>
-                        </section>
-                        <section class="work">
-                            <h3 class="title">Work Experience</h3>
-                            <p>From September 2020 to May 2021 I worked in small start-up, as a junior murkup developer.</p>
-                        </section>
-                    </main>
+                </div>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <div class="container">
+                <article>
+                    <section class="card">
+                        <div class="card__row">
+                            <img class="card__photo" src="img/photo.jpg" alt="">
+                            <div class="card__body">
+                                <div class="card__name">Alexei<br>Lyashenko</div>
+                                <div class="card__position">Front-end developer (Beginner)</div>
+                                <div class="card__location">Kharkiv, Ukraine</div>
+                            </div>
+                        </div>
+                        <div class="card__summary"></div>
+                    </section>
+                </article>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__row">
+                    <ul class="footer__contacts">
+                        <li>
+                            <a href="https://github.com/AlexeiLyashenko" target="_blank">
+                                qqq
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://telegram.me/rtghnt" target="_blank">
+                                www
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:lyashenko1alexei@gmail.com">
+                                eee
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+380992924382">
+                                rrr 
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <footer class="footer"></footer>
-        </div>
+        </footer>
     </div>
+
+    
+
+
+
+
+
+    <!-- <ul>
+        <li class="contacts__location">
+            <img src="" width="30" height="30" alt="location-icon"></img>
+            <span>Kharkiv, Ukraine</span>
+        </li>
+        <li class="contacts__phone">
+            <img src="" width="30" height="30" alt="phone-icon"></img>
+            <a href="tel:+380992924382">+38(099) 292-43-82</a>
+        </li>
+        <li class="contacts__email">
+            <img src="" width="30" height="30" alt="email-icon"></img>
+            <a href="mailto:lyashenko1alexei@gmail.com">lyashenko1alexei@gmail.com</a>
+        </li>
+        <li class="contacts__telegram">
+            <img src="" width="30" height="30" alt="telegram-icon"></img>
+            <a href="https://telegram.me/rtghnt" target="_blank">@rtgnht</a>
+        </li>
+        <li class="contacts__github">
+            <img src="" width="30" height="30" alt="github-icon"></img>
+            <a href="https://github.com/AlexeiLyashenko" target="_blank">alexeilyashenko</a>
+        </li>
+    </ul> -->
+                    
     
 </body>
 </html>
