@@ -204,7 +204,7 @@ body {
 // section blocks
 .--block {
     position: relative;
-    padding: 30px 30px 30px 60px;
+    padding: 40px 40px 40px 70px;
     background-color: #fff;
     box-shadow: 5px 5px 10px rgba(49, 60, 66, 0.6);
     transition: 0.2s;
@@ -222,7 +222,7 @@ body {
     background-color: $main-color;
 }
 .--title {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     @include font(null, 32px, 600, 42px);
 }
 
@@ -252,7 +252,10 @@ body {
 }
 
 .projects {
-
+    margin-bottom: 75px;
+    & a:first-of-type {
+        margin-bottom: 30px;
+    }
     &__line {
     }
 
@@ -262,24 +265,37 @@ body {
     &__item {
         display: flex;
         justify-content: space-between;
+        &:hover &-title {
+            text-decoration: underline;
+        }
     }
 
     &__item-body {
+        flex: 0 0 50%;
     }
 
     &__item-title {
+        margin-bottom: 10px;
+        @include font(null, 22px, 600, 30px);
+        color: $main-color;
     }
 
     &__item-text {
+        color: $main-color;
     }
 
     &__img {
+        flex: 0 0 50%;
+        & img {
+            border-radius: 10px;
+        } 
     }
 }
 
 
 .code {
-    padding: 30px 30px 0 60px;
+    margin-bottom: 75px;
+    padding: 40px 40px 0 70px;
     &__title {
     }
     & code {
@@ -296,7 +312,27 @@ body {
     height: 70px;
     line-height: 70px;
     background-color: $main-color;
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__contacts {
         display: flex;
+    }
+    &__copyright {
+        color: #f0f0f0;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    &__rss {
+        position: relative;
+        width: 120px;
+        height: 70px;
+        &::before {
+            @include svgMaskPseudo(140px, 70px, '../img/logo-rs2.svg', 100px, #f0f0f0);
+        }
     }
 }
