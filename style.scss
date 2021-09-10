@@ -130,15 +130,6 @@ body {
     &__contacts {
         display: flex;
     }
-    &__git {
-
-    }
-    &__telegram {
-        
-    }
-    &__email {
-        
-    }
     &__navigation {
         & ul {
             display: flex;
@@ -205,6 +196,7 @@ body {
 .--block {
     position: relative;
     padding: 40px 40px 40px 70px;
+    margin-bottom: 75px;
     background-color: #fff;
     box-shadow: 5px 5px 10px rgba(49, 60, 66, 0.6);
     transition: 0.2s;
@@ -233,6 +225,7 @@ body {
     &__body {
         & p{
             @include font(null, 16px, 400, 26px);
+            color: $main-color;
         }
         & > p:first-of-type {
             margin-bottom: 20px;
@@ -246,7 +239,8 @@ body {
         padding-left: 25px;
         list-style-type: disc;
         & li {
-            @include font(null, 20px, 400, 36px)
+            @include font(null, 20px, 400, 36px);
+            color: $main-color;
         }
     }
 }
@@ -304,6 +298,31 @@ body {
     }
 }
 
+.education {
+
+    &__period {
+        margin-bottom: 10px;
+        @include font(null, 22px, 600, 32px);
+    }
+    &__sp {
+        @include font(null, 20px, 600, 30px);
+    }
+}
+.languages {
+    & ul {
+        margin-bottom: 10px;
+        padding-left: 35px;
+        list-style-type: disc;
+        li {
+            @include font(null, 16px, 400, 28px);
+        }
+    }
+    &__english {
+        @include font(null, 20px, 600, 30px);
+        margin-bottom: 10px;
+    }
+}
+
 
 
 // Footer
@@ -322,7 +341,7 @@ body {
         display: flex;
     }
     &__copyright {
-        color: #f0f0f0;
+        color: #dddddd;
         font-size: 14px;
         letter-spacing: 1px;
     }
@@ -332,7 +351,12 @@ body {
         width: 120px;
         height: 70px;
         &::before {
-            @include svgMaskPseudo(140px, 70px, '../img/logo-rs2.svg', 100px, #f0f0f0);
+            @include svgMaskPseudo(140px, 70px, '../img/logo-rs2.svg', 100px, #dddddd);
+            transition: 0.1s;
+            :hover {
+                background-color: #ffffff;
+                transition: 0.1s;
+            }
         }
     }
 }

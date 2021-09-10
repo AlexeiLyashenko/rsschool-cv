@@ -300,6 +300,7 @@ body {
 .--block {
   position: relative;
   padding: 40px 40px 40px 70px;
+  margin-bottom: 75px;
   background-color: #fff;
   -webkit-box-shadow: 5px 5px 10px rgba(49, 60, 66, 0.6);
           box-shadow: 5px 5px 10px rgba(49, 60, 66, 0.6);
@@ -344,6 +345,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
+  color: #374555;
 }
 
 .summary__body > p:first-of-type {
@@ -363,6 +365,7 @@ body {
   font-size: 20px;
   font-weight: 400;
   line-height: 36px;
+  color: #374555;
 }
 
 .projects {
@@ -424,6 +427,38 @@ body {
   border-radius: 10px;
 }
 
+.education__period {
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.education__sp {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.languages ul {
+  margin-bottom: 10px;
+  padding-left: 35px;
+  list-style-type: disc;
+}
+
+.languages ul li {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.languages__english {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
 .footer {
   height: 70px;
   line-height: 70px;
@@ -449,7 +484,7 @@ body {
 }
 
 .footer__copyright {
-  color: #f0f0f0;
+  color: #dddddd;
   font-size: 14px;
   letter-spacing: 1px;
 }
@@ -471,5 +506,13 @@ body {
   mask: url("../img/logo-rs2.svg") no-repeat center;
   -webkit-mask-size: 100px;
   mask-size: 100px;
-  background-color: #f0f0f0;
+  background-color: #dddddd;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.footer__rss::before :hover {
+  background-color: #ffffff;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
