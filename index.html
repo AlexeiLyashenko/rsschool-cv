@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>CV RS School</title>
+    <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">    <title>CV RS School</title>
 </head>
 <body>
 
@@ -15,24 +16,13 @@
                 <div class="header__row">
                     <ul class="header__contacts">
                         <li>
-                            <a href="https://github.com/AlexeiLyashenko" target="_blank">
-                                qqq
-                            </a>
+                            <a class="header__git --git" href="https://github.com/AlexeiLyashenko" target="_blank"></a>
                         </li>
                         <li>
-                            <a href="https://telegram.me/rtghnt" target="_blank">
-                                www
-                            </a>
+                            <a class="header__telegram --telegram" href="https://telegram.me/rtghnt" target="_blank"></a>
                         </li>
                         <li>
-                            <a href="mailto:lyashenko1alexei@gmail.com">
-                                eee
-                            </a>
-                        </li>
-                        <li>
-                            <a href="tel:+380992924382">
-                                rrr 
-                            </a>
+                            <a class="header__email --email" href="mailto:lyashenko1alexei@gmail.com"></a>
                         </li>
                     </ul>
                     <nav class="header__navigation">
@@ -56,8 +46,8 @@
                                 <a href="">Languages</a>
                             </li>
                         </ul>
+                    </nav>
                 </div>
-                </nav>
             </div>
         </header>
         <main class="main">
@@ -72,7 +62,78 @@
                                 <div class="card__location">Kharkiv, Ukraine</div>
                             </div>
                         </div>
-                        <div class="card__summary"></div>
+                    </section>
+                    <section class="summary --block">
+                        <div class="summary__line --line"></div>
+                        <div class="summary__body">
+                            <div class="summary__title --title">Summary</div>
+                            <p>I love to create conditions for myself in which my learning of code will be inevitable. When I discovered RS School, I was pleasantly surprised, because all conditions have been already created.</p>
+                            <p>My first goal on the course is to go through all the stages, learn with a mentor, write code as a team, and make the final project. The next goal is to find acceptable conditions (my future work) where I will grow as a developer with the people who will be surround me.</p>
+                        </div>
+                    </section>
+                    <section class="skills --block">
+                        <div class="skills__line --line"></div>
+                        <div class="skills__title --title">Skills</div>
+                        <ul class="skills__list">
+                            <li>HTML</li>
+                            <li>CSS (SCSS, BEM)</li>
+                            <li>JavaScript (Basics, DOM)</li>
+                            <li>Git/GitHub</li>
+                            <li>Figma, Photoshop</li>
+                        </ul>
+                    </section>
+                    <section class="projects --block">
+                        <div class="projects__line --line"></div>
+                        <div class="projects__title --title">Recent projects</div>
+                        <a class="projects__item" href="#">
+                            <div class="projects__item-body">
+                                <div class="projects__item-title">OHC English courses</div>
+                                <div class="projects__item-text">Recent project</div>
+                            </div>
+                            <div class="projects__img">
+                                <img src="" alt="ohc">
+                            </div>
+                        </a>
+                        <a class="projects__item" href="#">
+                            <div class="projects__item-body">
+                                <div class="projects__item-title">OHC English courses</div>
+                                <div class="projects__item-text">Recent project</div>
+                            </div>
+                            <div class="projects__img">
+                                <img src="" alt="some">
+                            </div>
+                        </a>
+                        <a class="projects__item" href="#">
+                            <div class="projects__item-body">
+                                <div class="projects__item-title">OHC English courses</div>
+                                <div class="projects__item-text">Recent project</div>
+                            </div>
+                            <div class="projects__img">
+                                <img src="" alt="some">
+                            </div>
+                        </a>
+                    </section>
+                    <section class="code --block">
+                        <div class="code__line --line"></div>
+                        <div class="code__title --title">Code Example</div>
+                        <pre>
+                            <code class="js">
+function highAndLow(numbers){
+    let nums = numbers
+        .split(' ')
+        .filter(num => num != '' || num != ' ')
+        .map(num => +num);
+  
+    nums.sort( (a, b) => a - b );
+  
+    return `${String(nums[nums.length-1])} ${String(nums[0])}`
+} 
+                            </code>
+                        </pre>
+                    </section>
+                    <section class="education --block">
+                        <div class="education__line --line"></div>
+                        <div class="education__title --title">Education</div>
                     </section>
                 </article>
             </div>
@@ -82,60 +143,22 @@
                 <div class="footer__row">
                     <ul class="footer__contacts">
                         <li>
-                            <a href="https://github.com/AlexeiLyashenko" target="_blank">
-                                qqq
-                            </a>
+                            <a class="header__git --git" href="https://github.com/AlexeiLyashenko" target="_blank"></a>
                         </li>
                         <li>
-                            <a href="https://telegram.me/rtghnt" target="_blank">
-                                www
-                            </a>
+                            <a class="header__telegram --telegram" href="https://telegram.me/rtghnt" target="_blank"></a>
                         </li>
                         <li>
-                            <a href="mailto:lyashenko1alexei@gmail.com">
-                                eee
-                            </a>
-                        </li>
-                        <li>
-                            <a href="tel:+380992924382">
-                                rrr 
-                            </a>
+                            <a class="header__email --email" href="mailto:lyashenko1alexei@gmail.com"></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </footer>
     </div>
-
-    
-
-
-
-
-
-    <!-- <ul>
-        <li class="contacts__location">
-            <img src="" width="30" height="30" alt="location-icon"></img>
-            <span>Kharkiv, Ukraine</span>
-        </li>
-        <li class="contacts__phone">
-            <img src="" width="30" height="30" alt="phone-icon"></img>
-            <a href="tel:+380992924382">+38(099) 292-43-82</a>
-        </li>
-        <li class="contacts__email">
-            <img src="" width="30" height="30" alt="email-icon"></img>
-            <a href="mailto:lyashenko1alexei@gmail.com">lyashenko1alexei@gmail.com</a>
-        </li>
-        <li class="contacts__telegram">
-            <img src="" width="30" height="30" alt="telegram-icon"></img>
-            <a href="https://telegram.me/rtghnt" target="_blank">@rtgnht</a>
-        </li>
-        <li class="contacts__github">
-            <img src="" width="30" height="30" alt="github-icon"></img>
-            <a href="https://github.com/AlexeiLyashenko" target="_blank">alexeilyashenko</a>
-        </li>
-    </ul> -->
                     
-    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
 </body>
 </html>

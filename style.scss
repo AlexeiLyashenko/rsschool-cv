@@ -1,10 +1,10 @@
 @import '_fonts.scss';
 @import '_nullstyle.scss';
 
+
 // main colors
 
 $main-color: rgba(55, 69, 85, 1);
-
 // mixins
 
 @mixin svgMaskPseudo ($width, $height, $mask_path, $mask_size, $bgColor) {
@@ -21,9 +21,10 @@ $main-color: rgba(55, 69, 85, 1);
 	background-color: $bgColor;
 }
 
-@mixin font ($f-family, $f-size, $l-height) {
+@mixin font ($f-family, $f-size, $f-weight, $l-height) {
 	font-family: $f-family;
 	font-size: $f-size;
+    font-weight: $f-weight;
 	line-height: $l-height;
 }
 
@@ -32,7 +33,6 @@ $main-color: rgba(55, 69, 85, 1);
 		@content
 	}
 }
-
 
 html, body {
 	width: 100%;
@@ -52,27 +52,92 @@ body {
 
 .container {
     margin: 0 auto;
-    max-width: 1020px;
     padding: 0 15px;
+    max-width: 870px;
+}
+
+// svgs 
+
+.--git {
+    margin-right: 15px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    &::before {
+        @include svgMaskPseudo(30px, 30px, '../img/github.svg', 28px, #dddddd);
+        transition: 0.2s;
+        :hover > & {
+            background-color: #ffffff;
+            transition: 0.2s;
+        }
+    }
+}
+.--telegram {
+    margin-right: 15px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    &::before {
+        @include svgMaskPseudo(30px, 30px, '../img/telegram.svg', 28px, #dddddd);
+        transition: 0.2s;
+        :hover > & {
+            background-color: #ffffff;
+            transition: 0.2s;
+        }
+    }
+}
+.--email {
+    margin-right: 15px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    &::before {
+        @include svgMaskPseudo(30px, 30px, '../img/email.svg', 28px, #dddddd);
+            transition: 0.2s;
+        :hover > & {
+            background-color: #ffffff;
+            transition: 0.2s;
+        }
+    }
+    
 }
 
 .header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 2;
     min-width: 100%;
     height: 70px;
-    line-height: 70px;
     background-color: $main-color;
+    &.container {
+        height: 70px;
+    }
     &__row {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        height: 70px;
     }
     & a {
-        color: #000;
+        color: #dddddd;
+        transition: 0.1s;
+        &:hover {
+            color: #fff;
+            transition: 0.1s;
+        }
     }
     &__contacts {
         display: flex;
+    }
+    &__git {
+
+    }
+    &__telegram {
+        
+    }
+    &__email {
+        
     }
     &__navigation {
         & ul {
@@ -95,11 +160,13 @@ body {
         display: flex;
         justify-content: center;
 		&__row {
+            margin-bottom: 150px;
             display: flex;
             align-items: center;
 		}
 
 		&__photo {
+            margin: 0 50px 0 0; 
             margin-right: 50px;
             max-width: 300px;
             border-radius: 50%;
@@ -132,10 +199,95 @@ body {
             font-weight: 400;
             letter-spacing: 1px;
 		}
-
-		&__summary {
-		}
 }
+
+// section blocks
+.--block {
+    position: relative;
+    padding: 30px 30px 30px 60px;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(49, 60, 66, 0.6);
+    transition: 0.2s;
+    &:hover {
+        box-shadow: 10px 10px 25px rgba(49, 60, 66, 0.6);
+        transition: 0.2s;
+    }
+}
+.--line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    width: 20px;
+    background-color: $main-color;
+}
+.--title {
+    margin-bottom: 25px;
+    @include font(null, 32px, 600, 42px);
+}
+
+.summary {
+    display: flex;
+    align-items: center;
+    margin-bottom: 75px;
+    &__body {
+        & p{
+            @include font(null, 16px, 400, 26px);
+        }
+        & > p:first-of-type {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.skills {
+    margin-bottom: 75px;
+    &__list {
+        padding-left: 25px;
+        list-style-type: disc;
+        & li {
+            @include font(null, 20px, 400, 36px)
+        }
+    }
+}
+
+.projects {
+
+    &__line {
+    }
+
+    &__title {
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item-body {
+    }
+
+    &__item-title {
+    }
+
+    &__item-text {
+    }
+
+    &__img {
+    }
+}
+
+
+.code {
+    padding: 30px 30px 0 60px;
+    &__title {
+    }
+    & code {
+        font-size: 16px;
+        border-radius: 10px;
+    }
+}
+
 
 
 // Footer
@@ -144,4 +296,7 @@ body {
     height: 70px;
     line-height: 70px;
     background-color: $main-color;
+    &__contacts {
+        display: flex;
+    }
 }
