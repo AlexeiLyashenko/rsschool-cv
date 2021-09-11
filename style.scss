@@ -59,7 +59,7 @@ body {
 // svgs 
 
 .--git {
-    margin-right: 15px;
+    margin-right: 20px;
     position: relative;
     width: 30px;
     height: 30px;
@@ -73,7 +73,7 @@ body {
     }
 }
 .--telegram {
-    margin-right: 15px;
+    margin-right: 20px;
     position: relative;
     width: 30px;
     height: 30px;
@@ -87,7 +87,7 @@ body {
     }
 }
 .--email {
-    margin-right: 15px;
+    margin-right: 20px;
     position: relative;
     width: 30px;
     height: 30px;
@@ -351,7 +351,7 @@ body {
         width: 120px;
         height: 70px;
         &::before {
-            @include svgMaskPseudo(140px, 70px, '../img/logo-rs2.svg', 100px, #dddddd);
+            @include svgMaskPseudo(120px, 70px, '../img/logo-rs2.svg', 120px, #dddddd);
             transition: 0.1s;
             :hover {
                 background-color: #ffffff;

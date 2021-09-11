@@ -97,7 +97,7 @@ body {
 }
 
 .--git {
-  margin-right: 15px;
+  margin-right: 20px;
   position: relative;
   width: 30px;
   height: 30px;
@@ -126,7 +126,7 @@ body {
 }
 
 .--telegram {
-  margin-right: 15px;
+  margin-right: 20px;
   position: relative;
   width: 30px;
   height: 30px;
@@ -155,7 +155,7 @@ body {
 }
 
 .--email {
-  margin-right: 15px;
+  margin-right: 20px;
   position: relative;
   width: 30px;
   height: 30px;
@@ -498,14 +498,14 @@ body {
 .footer__rss::before {
   content: '';
   position: absolute;
-  width: 140px;
+  width: 120px;
   height: 70px;
   top: 0;
   left: 0;
   -webkit-mask: url("../img/logo-rs2.svg") no-repeat center;
   mask: url("../img/logo-rs2.svg") no-repeat center;
-  -webkit-mask-size: 100px;
-  mask-size: 100px;
+  -webkit-mask-size: 120px;
+  mask-size: 120px;
   background-color: #dddddd;
   -webkit-transition: 0.1s;
   transition: 0.1s;
