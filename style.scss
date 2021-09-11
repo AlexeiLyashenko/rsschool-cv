@@ -1,0 +1,362 @@
+@import '_fonts.scss';
+@import '_nullstyle.scss';
+
+
+// main colors
+
+$main-color: rgba(55, 69, 85, 1);
+// mixins
+
+@mixin svgMaskPseudo ($width, $height, $mask_path, $mask_size, $bgColor) {
+	content: '';
+	position: absolute;
+	width: $width;
+	height: $height;
+	top: 0;
+	left: 0;
+	-webkit-mask: url($mask_path) no-repeat center;
+	mask: url($mask_path) no-repeat center;
+	-webkit-mask-size: $mask_size;
+	mask-size: $mask_size;
+	background-color: $bgColor;
+}
+
+@mixin font ($f-family, $f-size, $f-weight, $l-height) {
+	font-family: $f-family;
+	font-size: $f-size;
+    font-weight: $f-weight;
+	line-height: $l-height;
+}
+
+@mixin media ($media_width, ) {
+	@media (max-width: $media_width) {
+		@content
+	}
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: 'Poppins', 'Arial', 'sans-serif';
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 240, 240);
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 870px;
+}
+
+// svgs 
+
+.--git {
+    margin-right: 20px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    &::before {
+        @include svgMaskPseudo(30px, 30px, '../img/github.svg', 28px, #dddddd);
+        transition: 0.2s;
+        :hover > & {
+            background-color: #ffffff;
+            transition: 0.2s;
+        }
+    }
+}
+.--telegram {
+    margin-right: 20px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    &::before {
+        @include svgMaskPseudo(30px, 30px, '../img/telegram.svg', 28px, #dddddd);
+        transition: 0.2s;
+        :hover > & {
+            background-color: #ffffff;
+            transition: 0.2s;
+        }
+    }
+}
+.--email {
+    margin-right: 20px;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    &::before {
+        @include svgMaskPseudo(30px, 30px, '../img/email.svg', 28px, #dddddd);
+            transition: 0.2s;
+        :hover > & {
+            background-color: #ffffff;
+            transition: 0.2s;
+        }
+    }
+    
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    min-width: 100%;
+    height: 70px;
+    background-color: $main-color;
+    &.container {
+        height: 70px;
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+    }
+    & a {
+        color: #dddddd;
+        transition: 0.1s;
+        &:hover {
+            color: #fff;
+            transition: 0.1s;
+        }
+    }
+    &__contacts {
+        display: flex;
+    }
+    &__navigation {
+        & ul {
+            display: flex;
+            & a {
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+
+// Main
+
+.main {
+    padding-top: 120px;
+    flex: 1 1 auto;
+}
+.card {
+        display: flex;
+        justify-content: center;
+		&__row {
+            margin-bottom: 150px;
+            display: flex;
+            align-items: center;
+		}
+
+		&__photo {
+            margin: 0 50px 0 0; 
+            margin-right: 50px;
+            max-width: 300px;
+            border-radius: 50%;
+            box-shadow: 10px 10px 20px rgba(49, 60, 66, 0.6);
+		}
+
+		&__body {
+		}
+
+		&__name {
+            margin-bottom: 30px;
+            font-size: 54px;
+            line-height: 58px;
+            font-weight: 700;
+		}
+
+		&__position {
+            margin-bottom: 10px;
+            font-size: 20px;
+            line-height: 26px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: $main-color;
+		}
+
+		&__location {
+            color: $main-color;
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: 400;
+            letter-spacing: 1px;
+		}
+}
+
+// section blocks
+.--block {
+    position: relative;
+    padding: 40px 40px 40px 70px;
+    margin-bottom: 75px;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(49, 60, 66, 0.6);
+    transition: 0.2s;
+    &:hover {
+        box-shadow: 10px 10px 25px rgba(49, 60, 66, 0.6);
+        transition: 0.2s;
+    }
+}
+.--line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    width: 20px;
+    background-color: $main-color;
+}
+.--title {
+    margin-bottom: 35px;
+    @include font(null, 32px, 600, 42px);
+}
+
+.summary {
+    display: flex;
+    align-items: center;
+    margin-bottom: 75px;
+    &__body {
+        & p{
+            @include font(null, 16px, 400, 26px);
+            color: $main-color;
+        }
+        & > p:first-of-type {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.skills {
+    margin-bottom: 75px;
+    &__list {
+        padding-left: 25px;
+        list-style-type: disc;
+        & li {
+            @include font(null, 20px, 400, 36px);
+            color: $main-color;
+        }
+    }
+}
+
+.projects {
+    margin-bottom: 75px;
+    & a:first-of-type {
+        margin-bottom: 30px;
+    }
+    &__line {
+    }
+
+    &__title {
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        &:hover &-title {
+            text-decoration: underline;
+        }
+    }
+
+    &__item-body {
+        flex: 0 0 50%;
+    }
+
+    &__item-title {
+        margin-bottom: 10px;
+        @include font(null, 22px, 600, 30px);
+        color: $main-color;
+    }
+
+    &__item-text {
+        color: $main-color;
+    }
+
+    &__img {
+        flex: 0 0 50%;
+        & img {
+            border-radius: 10px;
+        } 
+    }
+}
+
+
+.code {
+    margin-bottom: 75px;
+    padding: 40px 40px 0 70px;
+    &__title {
+    }
+    & code {
+        font-size: 16px;
+        border-radius: 10px;
+    }
+}
+
+.education {
+
+    &__period {
+        margin-bottom: 10px;
+        @include font(null, 22px, 600, 32px);
+    }
+    &__sp {
+        @include font(null, 20px, 600, 30px);
+    }
+}
+.languages {
+    & ul {
+        margin-bottom: 10px;
+        padding-left: 35px;
+        list-style-type: disc;
+        li {
+            @include font(null, 16px, 400, 28px);
+        }
+    }
+    &__english {
+        @include font(null, 20px, 600, 30px);
+        margin-bottom: 10px;
+    }
+}
+
+
+
+// Footer
+
+.footer {
+    height: 70px;
+    line-height: 70px;
+    background-color: $main-color;
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__contacts {
+        display: flex;
+    }
+    &__copyright {
+        color: #dddddd;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    &__rss {
+        position: relative;
+        width: 120px;
+        height: 70px;
+        &::before {
+            @include svgMaskPseudo(120px, 70px, '../img/logo-rs2.svg', 120px, #dddddd);
+            transition: 0.1s;
+            :hover {
+                background-color: #ffffff;
+                transition: 0.1s;
+            }
+        }
+    }
+}

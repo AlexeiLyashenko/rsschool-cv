@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">    <title>CV RS School</title>
+</head>
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__row">
+                    <ul class="header__contacts">
+                        <li>
+                            <a class="header__git --git" href="https://github.com/AlexeiLyashenko" target="_blank"></a>
+                        </li>
+                        <li>
+                            <a class="header__telegram --telegram" href="https://telegram.me/rtghnt" target="_blank"></a>
+                        </li>
+                        <li>
+                            <a class="header__email --email" href="mailto:lyashenko1alexei@gmail.com"></a>
+                        </li>
+                    </ul>
+                    <nav class="header__navigation">
+                        <ul>
+                            <li>
+                                <a href="">Summary</a>
+                            </li>
+                            <li>
+                                <a href="">Skills</a>
+                            </li>
+                            <li>
+                                <a href="">Projects</a>
+                            </li>
+                            <li>
+                                <a href="">Code Example</a>
+                            </li>
+                            <li>
+                                <a href="">Experience</a>
+                            </li>
+                            <li>
+                                <a href="">Languages</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="container">
+                <section class="card">
+                    <div class="card__row">
+                        <img class="card__photo" src="img/photo.jpg" alt="photo">
+                        <div class="card__body">
+                            <h2 class="card__name">Alexei<br>Lyashenko</h2>
+                            <div class="card__position">Front-end developer (Beginner)</div>
+                            <div class="card__location">Kharkiv, Ukraine</div>
+                        </div>
+                    </div>
+                </section>
+                <section class="summary --block">
+                    <div class="summary__line --line"></div>
+                    <div class="summary__body">
+                        <h3 class="summary__title --title">Summary</h3>
+                        <p>I love to create conditions for myself in which my learning of code will be inevitable. When I discovered RS School, I was pleasantly surprised, because all conditions have been already created.</p>
+                        <p>My first goal on the course is to go through all the stages, learn with a mentor, write code as a team, and make the final project. The next goal is to find acceptable conditions (my future work) where I will grow as a developer with the people who will be surround me.</p>
+                    </div>
+                </section>
+                <section class="skills --block">
+                    <div class="skills__line --line"></div>
+                    <h3 class="skills__title --title">Skills</h3>
+                    <ul class="skills__list">
+                        <li>HTML</li>
+                        <li>CSS (SCSS, BEM)</li>
+                        <li>JavaScript (Basics, DOM)</li>
+                        <li>Git/GitHub</li>
+                        <li>Figma, Photoshop</li>
+                    </ul>
+                </section>
+                <section class="projects --block">
+                    <div class="projects__line --line"></div>
+                    <h3 class="projects__title --title">Recent projects</h3>
+                    <a class="projects__item" href="https://alexeilyashenko.github.io/OHC/" target="_blank">
+                        <div class="projects__item-body">
+                            <div class="projects__item-title">OHC English courses</div>
+                            <div class="projects__item-text">Template for training - HTML, SCSS, BEM, JS</div>
+                        </div>
+                        <div class="projects__img">
+                            <img src="img/ohc.png" alt="ohc">
+                        </div>
+                    </a>
+                    <a class="projects__item" href="https://alexeilyashenko.github.io/pobeda/" target="_blank">
+                        <div class="projects__item-body">
+                            <div class="projects__item-title">OHC English courses</div>
+                            <div class="projects__item-text">Simple mini-landing - HTML, CSS</div>
+                        </div>
+                        <div class="projects__img">
+                            <img src="img/pobeda.png" alt="some">
+                        </div>
+                    </a>
+                </section>
+                <section class="code --block">
+                    <div class="code__line --line"></div>
+                    <h3 class="code__title --title">Code Example</h3>
+                    <pre>
+                        <code class="js">
+function highAndLow(numbers){
+    let nums = numbers
+        .split(' ')
+        .filter(num => num != '' || num != ' ')
+        .map(num => +num);
+  
+    nums.sort( (a, b) => a - b );
+  
+    return `${String(nums[nums.length-1])} ${String(nums[0])}`
+} 
+                        </code>
+                    </pre>
+                </section>
+                <section class="education --block">
+                    <div class="education__line --line"></div>
+                    <h3 class="education__title --title">Education</h3>
+                    <div class="education__period">2012 - 2016</div>
+                    <div class="education__sp">Economics of Enterprise</div>
+                    <div class="education__un">Kharkiv National University of Urban Economy</div>
+                </section>
+                <section class="languages --block">
+                    <div class="languages__line --line"></div>
+                    <h3 class="languages__title --title">Languages</h3>
+                    <div class="languages__english">English <span>A2+</span></div>
+                    <ul>
+                        <li>Finished English courses at GreenForest</li>
+                        <li>Grammar by Murphy (in progress)</li>
+                        <li>Also I like to speak English with my friends</li>
+                    </ul>
+                    <div class="languages__english">Russian - native</div>
+                    <div class="languages__english">Ukrainian - native</div>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__row">
+                    <ul class="footer__contacts">
+                        <li>
+                            <a class="header__git --git" href="https://github.com/AlexeiLyashenko" target="_blank"></a>
+                        </li>
+                        <li>
+                            <a class="header__telegram --telegram" href="https://telegram.me/rtghnt" target="_blank"></a>
+                        </li>
+                        <li>
+                            <a class="header__email --email" href="mailto:lyashenko1alexei@gmail.com"></a>
+                        </li>
+                    </ul>
+                    <div class="footer__copyright">&copy; 2021 by Alexei Lyashenko</div>
+                    <a class="footer__rss" href="https://rs.school/js/" target="_blank"></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+                    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+</body>
+</html>
