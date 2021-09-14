@@ -37,6 +37,12 @@ $main-color: rgba(55, 69, 85, 1);
 html, body {
 	width: 100%;
 	height: 100%;
+    
+}
+html {
+    &.overflow-hidden {
+        overflow: hidden;
+    }
 }
 
 body {
@@ -56,7 +62,18 @@ body {
     max-width: 870px;
 }
 
-// svgs 
+
+// .--hidden {
+//     opacity: 0;
+//     visibility: hidden;
+//     position: absolute;
+//     clip: rect(0 0 0 0);
+//     width: 1px;
+//     height: 1px;
+//     margin: -1px;
+// }
+
+// svgs
 
 .--git {
     margin-right: 20px;
@@ -98,8 +115,7 @@ body {
             background-color: #ffffff;
             transition: 0.2s;
         }
-    }
-    
+    }    
 }
 
 .header {
@@ -123,7 +139,7 @@ body {
         color: #dddddd;
         transition: 0.1s;
         &:hover {
-            color: #fff;
+            color: #ffffff;
             transition: 0.1s;
         }
     }
@@ -131,12 +147,85 @@ body {
         display: flex;
     }
     &__navigation {
+        z-index: 11;
         & ul {
             display: flex;
             & a {
                 margin-right: 15px;
             }
         }
+        @include media(768px) {
+            margin-top: 70px;
+            position: fixed;
+            top: 0;
+            right: -250%;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(240, 240, 240);
+            transition: 0.3s;
+            & ul {
+                padding-top: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                & li a{
+                    margin-bottom: 15px;
+                    @include font(null, 34px, 600, 44px);
+                    color: #000000;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        &.active-list {
+            right: 0;
+            transition: 0.2s;
+        }
+    }
+    &__burger {
+        position: relative;
+        height: 40px;
+        width: 40px;
+        display: none;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            height: 5px;
+            width: 40px;
+            background-color: #fff;
+        }
+
+        &:before {
+            top: 12px;
+                transition: 0.2s ease-in-out;
+
+        }
+        &:after {
+            width: 25px;
+            top: 24px;
+                transition: 0.2s ease-in-out;
+
+        }
+        &.active-burger {
+            &:before {
+                top: 18px;
+                transform: rotate(-45deg);
+                transition: 0.2s ease-in-out;
+            }
+            &:after {
+                top: 18px;
+                width: 40px;
+                transform: rotate(45deg);
+                transition: 0.2s ease-in-out;
+
+            }
+        }
+        @include media(768px) {
+            display: flex;
+        }
+        
     }
 }
 
@@ -154,17 +243,25 @@ body {
             margin-bottom: 150px;
             display: flex;
             align-items: center;
+            @include media(700px) {
+                flex-direction: column;
+            }
 		}
 
 		&__photo {
-            margin: 0 50px 0 0; 
             margin-right: 50px;
             max-width: 300px;
             border-radius: 50%;
             box-shadow: 10px 10px 20px rgba(49, 60, 66, 0.6);
+            @include media(700px) {
+                margin: 0 0 40px 0;
+            }
 		}
 
 		&__body {
+            @include media(700px) {
+                text-align: center;
+            }
 		}
 
 		&__name {
@@ -172,6 +269,9 @@ body {
             font-size: 54px;
             line-height: 58px;
             font-weight: 700;
+            // @include media(700px) {
+            //     text-align: center;
+            // }
 		}
 
 		&__position {
