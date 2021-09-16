@@ -37,6 +37,12 @@ $main-color: rgba(55, 69, 85, 1);
 html, body {
 	width: 100%;
 	height: 100%;
+    
+}
+html {
+    &.overflow-hidden {
+        overflow: hidden;
+    }
 }
 
 body {
@@ -54,15 +60,21 @@ body {
     margin: 0 auto;
     padding: 0 15px;
     max-width: 870px;
+    @include media(350px) {
+        padding: 0 10px;
+    }
 }
 
-// svgs 
+// svgs
 
 .--git {
     margin-right: 20px;
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
+    @include media(415px) {
+        margin-right: 10px;
+    }
     &::before {
         @include svgMaskPseudo(30px, 30px, '../img/github.svg', 28px, #dddddd);
         transition: 0.2s;
@@ -75,8 +87,11 @@ body {
 .--telegram {
     margin-right: 20px;
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
+    @include media(415px) {
+        margin-right: 10px;
+    }
     &::before {
         @include svgMaskPseudo(30px, 30px, '../img/telegram.svg', 28px, #dddddd);
         transition: 0.2s;
@@ -89,8 +104,11 @@ body {
 .--email {
     margin-right: 20px;
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
+    @include media(415px) {
+        margin-right: 10px;
+    }
     &::before {
         @include svgMaskPseudo(30px, 30px, '../img/email.svg', 28px, #dddddd);
             transition: 0.2s;
@@ -98,17 +116,16 @@ body {
             background-color: #ffffff;
             transition: 0.2s;
         }
-    }
-    
+    }    
 }
 
+// HEADER
 .header {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
     min-width: 100%;
-    height: 70px;
     background-color: $main-color;
     &.container {
         height: 70px;
@@ -118,12 +135,15 @@ body {
         justify-content: space-between;
         align-items: center;
         height: 70px;
+        @include media(415px) {
+            height: 60px;
+        }
     }
     & a {
         color: #dddddd;
         transition: 0.1s;
         &:hover {
-            color: #fff;
+            color: #ffffff;
             transition: 0.1s;
         }
     }
@@ -131,21 +151,100 @@ body {
         display: flex;
     }
     &__navigation {
+        z-index: 11;
         & ul {
             display: flex;
             & a {
                 margin-right: 15px;
             }
         }
+        @include media(768px) {
+            margin-top: 70px;
+            position: fixed;
+            top: 0;
+            right: -250%;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(240, 240, 240);
+            transition: 0.3s;
+            & ul {
+                padding-top: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                & li a{
+                    margin-bottom: 15px;
+                    @include font(null, 34px, 600, 44px);
+                    color: #000000;
+                    text-transform: uppercase;
+                }
+            }
+            @include media(415px) {
+                margin-top: 60px;
+            }
+        }
+        &.active-list {
+            right: 0;
+            transition: 0.2s;
+        }
+    }
+    &__burger {
+        position: relative;
+        height: 40px;
+        width: 40px;
+        display: none;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            height: 5px;
+            width: 40px;
+            background-color: #dddddd;
+        }
+
+        &:before {
+            top: 12px;
+                transition: 0.2s ease-in-out;
+
+        }
+        &:after {
+            width: 25px;
+            top: 24px;
+                transition: 0.2s ease-in-out;
+
+        }
+        &.active-burger {
+            &:before {
+                top: 18px;
+                transform: rotate(-45deg);
+                transition: 0.2s ease-in-out;
+            }
+            &:after {
+                top: 18px;
+                width: 40px;
+                transform: rotate(45deg);
+                transition: 0.2s ease-in-out;
+
+            }
+        }
+        @include media(768px) {
+            display: flex;
+        }
+        
     }
 }
 
 
-// Main
+// MAIN
 
 .main {
     padding-top: 120px;
     flex: 1 1 auto;
+    @include media(375px) {
+        padding-top: 100px;
+    }
 }
 .card {
         display: flex;
@@ -154,17 +253,34 @@ body {
             margin-bottom: 150px;
             display: flex;
             align-items: center;
+            @include media(700px) {
+                flex-direction: column;
+            }
+            @include media(768px) {
+                margin-bottom: 100px;
+            }
+            @include media(375px) {
+                margin-bottom: 75px;
+            }
 		}
 
 		&__photo {
-            margin: 0 50px 0 0; 
             margin-right: 50px;
             max-width: 300px;
             border-radius: 50%;
             box-shadow: 10px 10px 20px rgba(49, 60, 66, 0.6);
+            @include media(700px) {
+                margin: 0 0 40px 0;
+            }
+            @include media(375px) {
+                width: 250px;
+            }
 		}
 
 		&__body {
+            @include media(700px) {
+                text-align: center;
+            }
 		}
 
 		&__name {
@@ -172,6 +288,11 @@ body {
             font-size: 54px;
             line-height: 58px;
             font-weight: 700;
+            transition: .5s;
+            @include media(375px) {
+                font-size: 46px;
+                line-height: 52px;
+            }
 		}
 
 		&__position {
@@ -181,14 +302,22 @@ body {
             font-weight: 400;
             letter-spacing: 1px;
             color: $main-color;
+            @include media(375px) {
+                font-size: 18px;
+                line-height: 24px;
+            }
 		}
 
 		&__location {
-            color: $main-color;
             font-size: 18px;
             line-height: 26px;
             font-weight: 400;
             letter-spacing: 1px;
+            color: $main-color;
+            @include media(375px) {
+                font-size: 18px;
+                line-height: 24px;
+            }
 		}
 }
 
@@ -204,6 +333,13 @@ body {
         box-shadow: 10px 10px 25px rgba(49, 60, 66, 0.6);
         transition: 0.2s;
     }
+    @include media(450px) {
+        padding: 40px 30px 40px 50px;
+    }
+    @include media(375px) {
+        padding: 35px 25px 35px 45px;
+        margin-bottom: 60px;
+    }
 }
 .--line {
     position: absolute;
@@ -216,6 +352,10 @@ body {
 .--title {
     margin-bottom: 35px;
     @include font(null, 32px, 600, 42px);
+    @include media(375px) {
+        @include font(null, 30px, 600, 36px);
+        margin-bottom: 40px;
+    }
 }
 
 .summary {
@@ -249,11 +389,15 @@ body {
     margin-bottom: 75px;
     & a:first-of-type {
         margin-bottom: 30px;
-    }
-    &__line {
+        @include media(550px) {
+            margin-bottom: 50px;
+        }
     }
 
     &__title {
+        @include media(550px) {
+            margin-bottom: 50px;
+        }
     }
 
     &__item {
@@ -261,6 +405,9 @@ body {
         justify-content: space-between;
         &:hover &-title {
             text-decoration: underline;
+        }
+        @include media(550px) {
+            flex-direction: column;
         }
     }
 
@@ -276,6 +423,9 @@ body {
 
     &__item-text {
         color: $main-color;
+        @include media(550px) {
+            margin-bottom: 10px;
+        }
     }
 
     &__img {
@@ -290,11 +440,18 @@ body {
 .code {
     margin-bottom: 75px;
     padding: 40px 40px 0 70px;
-    &__title {
-    }
     & code {
         font-size: 16px;
         border-radius: 10px;
+        @include media(450px) {
+            font-size: 14px;
+        }
+    }
+    @include media(450px) {
+        padding: 40px 30px 40px 50px;
+    }
+    @include media(375px) {
+        padding: 35px 25px 35px 45px;
     }
 }
 
@@ -303,9 +460,14 @@ body {
     &__period {
         margin-bottom: 10px;
         @include font(null, 22px, 600, 32px);
+        color: $main-color;
     }
     &__sp {
         @include font(null, 20px, 600, 30px);
+        color: $main-color;
+    }
+    &__un {
+        color: $main-color;
     }
 }
 .languages {
@@ -313,6 +475,7 @@ body {
         margin-bottom: 10px;
         padding-left: 35px;
         list-style-type: disc;
+        color: $main-color;
         li {
             @include font(null, 16px, 400, 28px);
         }
@@ -325,7 +488,7 @@ body {
 
 
 
-// Footer
+// FOOTER
 
 .footer {
     height: 70px;
@@ -350,9 +513,16 @@ body {
         position: relative;
         width: 120px;
         height: 70px;
+        @include media(375px) {
+            width: 80px;
+            height: 40px;
+        }
         &::before {
             @include svgMaskPseudo(120px, 70px, '../img/logo-rs2.svg', 120px, #dddddd);
             transition: 0.1s;
+            @include media(375px) {
+                @include svgMaskPseudo(80px, 40px, '../img/logo-rs2.svg', 78px, #dddddd);
+            }
             :hover {
                 background-color: #ffffff;
                 transition: 0.1s;
