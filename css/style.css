@@ -100,6 +100,12 @@ body {
   max-width: 870px;
 }
 
+@media (max-width: 350px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
 .--git {
   margin-right: 20px;
   position: relative;

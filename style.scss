@@ -60,6 +60,9 @@ body {
     margin: 0 auto;
     padding: 0 15px;
     max-width: 870px;
+    @include media(350px) {
+        padding: 0 10px;
+    }
 }
 
 // svgs
@@ -116,6 +119,7 @@ body {
     }    
 }
 
+// HEADER
 .header {
     position: fixed;
     top: 0;
@@ -233,7 +237,7 @@ body {
 }
 
 
-// Main
+// MAIN
 
 .main {
     padding-top: 120px;
@@ -484,7 +488,7 @@ body {
 
 
 
-// Footer
+// FOOTER
 
 .footer {
     height: 70px;
